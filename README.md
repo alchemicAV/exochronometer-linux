@@ -875,12 +875,43 @@ nodes), `SynthParams` (Spectrum / Synth panel).
 (`NoteSnap` + Timeline), and `HarmonicAnalysis` again for the Spectrum page.
 All five pages and all ten MISC modes are implemented; nothing is left unwired.
 
-**Genuinely absent features:** audio (was `AVFoundation`), the 16 macOS board
-widgets, the trigger engine, the X auto-poster, and WidgetKit. These are UI and
-platform features to rebuild on this side rather than port.
+**Genuinely absent features:** the 16 macOS board widgets, the trigger engine, the
+X auto-poster, and WidgetKit. These are UI and platform features to rebuild on this
+side rather than port. Audio is no longer on this list - it was `AVFoundation`, and
+it is now the real-time `ExoAudio` module described above.
 
-## Packaging note
+## Publishing
 
-`omacom/omarchy-pkgs` is the distro's curated set shipped to every Omarchy user;
-a personal instrument does not belong there. This builds a normal local
-package — install with `sudo pacman -U`, or publish to the AUR.
+Source: **https://github.com/alchemicAV/exochronometer-linux** (public, MIT).
+
+### omarchy-pkgs
+
+`omacom/omarchy-pkgs` is the distro's curated package set, and it is **vouch-gated**:
+`.github/VOUCHED.td` lists trusted external contributors, and a PR from anyone else
+gets the plan only - the build is skipped until a maintainer either vouches for the
+author or applies a `build-approved` label to that PR. That is a deliberately
+human gate, not an error, and the PR says so rather than waiting on a build that
+will not start.
+
+Submitted as **omacom/omarchy-pkgs#699**, adding both recipes under
+`pkgbuilds/`. Verified locally with `makepkg` against the `v0.1.0` tag, namcap
+clean on both.
+
+### AUR
+
+The same recipes serve the AUR (`packaging/aur/`, with the `.SRCINFO` files the
+AUR parses). Publishing needs an AUR account and an SSH key registered with it,
+which is the one step that cannot be done from here:
+
+```bash
+# once, with your AUR account:
+git clone ssh://aur@aur.archlinux.org/exochronometer.git
+cp packaging/aur/exochronometer/{PKGBUILD,.SRCINFO} exochronometer/
+cd exochronometer && git add . && git commit -m "0.1.0" && git push
+# and the same for exochronometer-omarchy
+```
+
+### Local
+
+For a machine that just wants the app, `scripts/make-package.sh` builds both
+packages from the working tree and `sudo pacman -U` installs them.
