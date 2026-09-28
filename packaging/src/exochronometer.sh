@@ -1,1 +1,0 @@
-/home/alchemicav/exochronometer-linux/packaging/exochronometer.sh

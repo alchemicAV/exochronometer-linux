@@ -26,3 +26,8 @@ __pycache__/
 *.log
 *.swp
 .DS_Store
+# makepkg working directories (never shipped, never committed)
+packaging/pkg/
+packaging/src/
+packaging/omarchy/pkg/
+packaging/omarchy/src/

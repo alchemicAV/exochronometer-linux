@@ -1,3 +1,0 @@
-module ExoAudio
-plugin exoaudio
-classname ExoAudioPlugin
