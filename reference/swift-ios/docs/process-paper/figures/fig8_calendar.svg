@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" font-family="ui-monospace,Menlo,Consolas,monospace">
+  <rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+  <circle cx="250.0" cy="250.0" r="168" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.4"/>
+  <line x1="250.00" y1="82.00" x2="409.78" y2="198.09" stroke="#1b2026" stroke-opacity="0.750" stroke-width="1.3" stroke-linecap="butt"/>
+  <line x1="409.78" y1="198.09" x2="348.75" y2="385.91" stroke="#1b2026" stroke-opacity="0.750" stroke-width="1.3" stroke-linecap="butt"/>
+  <line x1="348.75" y1="385.91" x2="151.25" y2="385.91" stroke="#1b2026" stroke-opacity="0.750" stroke-width="1.3" stroke-linecap="butt"/>
+  <line x1="151.25" y1="385.91" x2="90.22" y2="198.09" stroke="#1b2026" stroke-opacity="0.750" stroke-width="1.3" stroke-linecap="butt"/>
+  <line x1="90.22" y1="198.09" x2="250.00" y2="82.00" stroke="#1b2026" stroke-opacity="0.750" stroke-width="1.3" stroke-linecap="butt"/>
+  <circle cx="250.00" cy="82.00" r="3.4" fill="#1b2026" fill-opacity="0.900"/>
+  <text x="250.00" y="52.00" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">Dec 21</text>
+  <circle cx="409.78" cy="198.09" r="3.4" fill="#1b2026" fill-opacity="0.900"/>
+  <text x="438.31" y="188.81" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">Mar 5</text>
+  <circle cx="348.75" cy="385.91" r="3.4" fill="#1b2026" fill-opacity="0.900"/>
+  <text x="366.38" y="410.19" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">May 17</text>
+  <circle cx="151.25" cy="385.91" r="3.4" fill="#1b2026" fill-opacity="0.900"/>
+  <text x="133.62" y="410.19" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">Jul 29</text>
+  <circle cx="90.22" cy="198.09" r="3.4" fill="#1b2026" fill-opacity="0.900"/>
+  <text x="61.69" y="188.81" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">Oct 10</text>
+  <circle cx="357.99" cy="121.30" r="8.4" fill="#ffffff"/>
+  <circle cx="357.99" cy="121.30" r="6" fill="#2f5d84"/>
+  <text x="369.99" y="109.30" font-size="11" fill="#1b2026" fill-opacity="0.800" text-anchor="start" font-weight="400" dominant-baseline="middle">today</text>
+  <text x="250.00" y="238.00" font-size="13" fill="#1b2026" fill-opacity="0.600" text-anchor="middle" font-weight="400" dominant-baseline="middle">T = one year</text>
+  <text x="250.00" y="262.00" font-size="13" fill="#1b2026" fill-opacity="0.850" text-anchor="middle" font-weight="400" dominant-baseline="middle">{5} → 5 dates</text>
+</svg>

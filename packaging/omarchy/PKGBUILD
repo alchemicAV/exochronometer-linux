@@ -1,0 +1,50 @@
+# Maintainer: Jaycee Appi <appi.jaycee@gmail.com>
+#
+# Omarchy shell integration for Exochronometer.
+#
+# A separate package from `exochronometer` on purpose: this half needs
+# Quickshell and the Omarchy shell APIs, while the app itself is a plain Qt6
+# program that runs anywhere. Folding them together would make the app depend on
+# the shell (namcap flags exactly that: "Dependency quickshell detected and not
+# included"), and would drag a shell onto machines that only want the window.
+#
+# The plugin is generated from the app's own source by
+# scripts/build-omarchy-plugin.mjs - the bar widget's degree and the panel's
+# circles come from the same compiled core, validated against the Swift oracle.
+pkgname=exochronometer-omarchy
+pkgver=0.1.0
+pkgrel=9
+# Warning shown after install/upgrade; see the file for why it matters.
+install=exochronometer-omarchy.install
+pkgdesc="Omarchy shell integration for Exochronometer: a bar widget showing a live timeframe degree, and the full instrument as a panel"
+arch=('any')
+url="https://github.com/alchemicAV/exochronometer-ios"
+license=('MIT')
+# quickshell supplies the Quickshell/Quickshell.Io types the plugin imports;
+# omarchy supplies qs.Ui and qs.Commons (namcap cannot attribute those to a
+# package, so it reports them as uninstalled dependencies - they are covered).
+# qt6-multimedia for the panel's audio player, the same one the app uses.
+# exochronometer supplies the ExoAudio QML module the real-time player imports;
+# without it the panel still works, it just falls back to the buffer player.
+depends=('quickshell' 'omarchy' 'qt6-multimedia' 'exochronometer')
+# Only the `remove` subcommand needs it.
+optdepends=('python: for `exochronometer-omarchy-plugin remove`')
+source=('exochronometer-plugin.tar.gz'
+        'exochronometer-omarchy-plugin'
+        'LICENSE')
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+  # The plugin is self-contained: it carries the compiled core and every UI
+  # component, so it does not need the app package installed alongside it.
+  install -dm755 "$pkgdir/usr/share/exochronometer-omarchy-plugin"
+  cp -r "$srcdir/omarchy-plugin/." "$pkgdir/usr/share/exochronometer-omarchy-plugin/"
+
+  # Copies it into the user's ~/.config/omarchy/plugins and restarts the shell.
+  # A package must never write into a user's home itself.
+  install -Dm755 "$srcdir/exochronometer-omarchy-plugin" \
+    "$pkgdir/usr/bin/exochronometer-omarchy-plugin"
+
+  install -Dm644 "$srcdir/LICENSE" \
+    "$pkgdir/usr/share/licenses/exochronometer-omarchy/LICENSE"
+}

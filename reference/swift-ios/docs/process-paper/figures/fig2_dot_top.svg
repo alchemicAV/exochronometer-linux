@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="460" height="460" font-family="ui-monospace,Menlo,Consolas,monospace">
+  <rect x="0" y="0" width="460" height="460" fill="#ffffff"/>
+  <circle cx="230.0" cy="230.0" r="168" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.4"/>
+  <circle cx="230.00" cy="62.00" r="8.9" fill="#ffffff"/>
+  <circle cx="230.00" cy="62.00" r="6.5" fill="#2f5d84"/>
+  <text x="230.00" y="40.00" font-size="12" fill="#1b2026" fill-opacity="0.800" text-anchor="middle" font-weight="400" dominant-baseline="middle">start</text>
+  <text x="230.00" y="230.00" font-size="15" fill="#1b2026" fill-opacity="0.550" text-anchor="middle" font-weight="400" dominant-baseline="middle">t = 0</text>
+</svg>

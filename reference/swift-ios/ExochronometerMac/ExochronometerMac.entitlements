@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+    All capability entitlements disabled pending paid Apple Developer
+    Program. With sandbox + hardened-runtime off, the app builds and
+    runs with ad-hoc signing on the developer's own Mac.
+
+    Uncomment when ready to re-enable. Also re-enable
+    ENABLE_HARDENED_RUNTIME in project.yml.
+
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <key>com.apple.developer.icloud-services</key>
+    <array>
+        <string>CloudKit</string>
+    </array>
+    <key>com.apple.developer.icloud-container-identifiers</key>
+    <array>
+        <string>iCloud.com.alchemicav.exochronometer</string>
+    </array>
+    -->
+</dict>
+</plist>

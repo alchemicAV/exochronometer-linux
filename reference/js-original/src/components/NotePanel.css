@@ -1,0 +1,78 @@
+.note-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.note-panel {
+  position: absolute;
+  background: rgba(10, 10, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  min-width: 200px;
+  max-width: 280px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 101;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.note-panel-header {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #DDD;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.note-item {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.note-item:last-child {
+  border-bottom: none;
+}
+
+.note-text {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #FFF;
+  line-height: 1.4;
+}
+
+.note-meta {
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  color: #DDD;
+  margin-top: 2px;
+}
+
+.note-delete {
+  background: none;
+  border: none;
+  color: #DDD;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0 4px;
+  float: right;
+}
+
+.note-delete:hover {
+  color: rgba(255, 100, 100, 0.8);
+}
+
+.note-empty {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: #DDD;
+  font-style: italic;
+}

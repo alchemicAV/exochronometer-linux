@@ -1,0 +1,236 @@
+/* Debug menu — positioned at bottom half of main-view */
+.debug-menu {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Fade-in wrapper for all content */
+.debug-menu__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: debugFadeIn 0.4s ease-out;
+}
+
+@keyframes debugFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.debug-menu__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.debug-menu__live-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.debug-menu__live-toggle input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.debug-menu__live-toggle input[type="checkbox"]:checked {
+  border-color: #FFF;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.debug-menu__live-toggle input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.debug-menu__live-label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #DDD;
+  transition: color 0.3s;
+}
+
+.debug-menu__live-toggle:hover .debug-menu__live-label {
+  color: #FFF;
+}
+
+.debug-menu__action {
+  background: #000;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  padding: 4px 13px;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.debug-menu__action:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.debug-menu__action--active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.debug-menu__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1100px;
+}
+
+.debug-menu__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: #000;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.debug-menu__btn--on {
+  border-color: #FFF;
+}
+
+.debug-menu__btn--off {
+  border-color: rgba(255, 255, 255, 0.2);
+  opacity: 0.3;
+}
+
+.debug-menu__btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.debug-menu__btn-label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #FFF;
+}
+
+.shape-preview {
+  display: block;
+}
+
+/* Circle toggle cards */
+.debug-menu__circle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.debug-menu__circle-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: #000;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.debug-menu__circle-btn--on {
+  border-color: #FFF;
+}
+
+.debug-menu__circle-btn--off {
+  border-color: rgba(255, 255, 255, 0.2);
+  opacity: 0.3;
+}
+
+.debug-menu__circle-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.debug-menu__circle-btn-label {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #FFF;
+}
+
+/* Settings row */
+.debug-menu__settings-row {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+/* Note rotation setting */
+.debug-menu__setting {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.debug-menu__setting-label {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #DDD;
+}
+
+.debug-menu__select {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  padding: 4px 5px;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 54px;
+}
+
+.debug-menu__select:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.debug-menu__select option {
+  background: #000;
+  color: #FFF;
+}

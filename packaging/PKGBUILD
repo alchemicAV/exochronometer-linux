@@ -1,0 +1,57 @@
+# Maintainer: Jaycee Appi <appi.jaycee@gmail.com>
+#
+# Linux/Omarchy port of Exochronometer.
+#
+# This PKGBUILD packages the already-assembled QML app (scripts/make-package.sh
+# compiles the TypeScript core and stages build/app into a tarball first).
+#
+# A package intended for a real repository would instead declare
+#   makedepends=('nodejs' 'npm')
+# and build from a git source in build(), running `npm ci && tsc` so the
+# JavaScript is never checked in. That is deferred here because it needs
+# network access to the npm registry at build time.
+pkgname=exochronometer
+pkgver=0.1.0
+pkgrel=23
+pkgdesc="Nested cycles of time as circles, inscribed geometry and just-intonation tones"
+# x86_64 since the real-time audio kernel is a compiled QML module. This is the
+# caveat of that design: the pure-QML part would still be 'any', the module cannot.
+arch=('x86_64')
+url="https://github.com/alchemicAV/exochronometer-ios"
+license=('MIT')
+# A stripped module is enough: no debug package needed for a single .so.
+options=('!debug')
+# qt6-multimedia carries the buffer player (SynthPlayer.qml) and the QAudioSink
+# the real-time module is built on. qt6-base provides the Qt headers; moc comes
+# with it, so there is no separate build dependency.
+depends=('qt6-declarative' 'qt6-multimedia' 'hicolor-icon-theme')
+source=('exochronometer-app.tar.gz'
+        'exochronometer.desktop'
+        'exochronometer.sh'
+        'exochronometer.svg'
+        'LICENSE')
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+package() {
+  install -dm755 "$pkgdir/usr/share/exochronometer"
+  cp -r "$srcdir/app/." "$pkgdir/usr/share/exochronometer/"
+
+  # The real-time audio kernel, as a QML module. Qt finds it on the default
+  # import path, so neither host needs an environment variable.
+  install -dm755 "$pkgdir/usr/lib/qt6/qml/ExoAudio"
+  install -Dm755 "$srcdir/audio/ExoAudio/libexoaudio.so" \
+    "$pkgdir/usr/lib/qt6/qml/ExoAudio/libexoaudio.so"
+  install -Dm644 "$srcdir/audio/ExoAudio/qmldir" \
+    "$pkgdir/usr/lib/qt6/qml/ExoAudio/qmldir"
+
+  install -Dm755 "$srcdir/exochronometer.sh" "$pkgdir/usr/bin/exochronometer"
+
+  install -Dm644 "$srcdir/exochronometer.desktop" \
+    "$pkgdir/usr/share/applications/exochronometer.desktop"
+
+  install -Dm644 "$srcdir/exochronometer.svg" \
+    "$pkgdir/usr/share/icons/hicolor/scalable/apps/exochronometer.svg"
+
+  # namcap requires a license file for the 'MIT' identifier.
+  install -Dm644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/exochronometer/LICENSE"
+}

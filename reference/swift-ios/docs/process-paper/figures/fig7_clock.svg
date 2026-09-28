@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 896 230" width="896" height="230" font-family="ui-monospace,Menlo,Consolas,monospace">
+  <rect x="0" y="0" width="896" height="230" fill="#ffffff"/>
+  <circle cx="112.0" cy="108.0" r="72.0" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.2"/>
+  <line x1="112.00" y1="36.00" x2="174.35" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="174.35" y1="144.00" x2="49.65" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="49.65" y1="144.00" x2="112.00" y2="36.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <circle cx="82.71" cy="173.78" r="7.9" fill="#ffffff"/>
+  <circle cx="82.71" cy="173.78" r="5.5" fill="#2f5d84"/>
+  <text x="112.00" y="108.00" font-size="13" fill="#1b2026" fill-opacity="0.850" text-anchor="middle" font-weight="400" dominant-baseline="middle">34:00</text>
+  <text x="112.00" y="206.00" font-size="11" fill="#1b2026" fill-opacity="0.750" text-anchor="middle" font-weight="400" dominant-baseline="middle">ONE HOUR</text>
+  <circle cx="336.0" cy="108.0" r="72.0" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.2"/>
+  <line x1="336.00" y1="36.00" x2="398.35" y2="144.00" stroke="#1b2026" stroke-opacity="0.411" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="398.35" y1="144.00" x2="273.65" y2="144.00" stroke="#1b2026" stroke-opacity="0.411" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="273.65" y1="144.00" x2="336.00" y2="36.00" stroke="#1b2026" stroke-opacity="0.411" stroke-width="1.0" stroke-linecap="butt"/>
+  <circle cx="270.75" cy="138.43" r="7.9" fill="#ffffff"/>
+  <circle cx="270.75" cy="138.43" r="5.5" fill="#2f5d84"/>
+  <text x="336.00" y="108.00" font-size="13" fill="#1b2026" fill-opacity="0.850" text-anchor="middle" font-weight="400" dominant-baseline="middle">16:20</text>
+  <text x="336.00" y="206.00" font-size="11" fill="#1b2026" fill-opacity="0.750" text-anchor="middle" font-weight="400" dominant-baseline="middle">ONE DAY</text>
+  <circle cx="560.0" cy="108.0" r="72.0" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.2"/>
+  <line x1="560.00" y1="36.00" x2="622.35" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="622.35" y1="144.00" x2="497.65" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="497.65" y1="144.00" x2="560.00" y2="36.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <circle cx="589.29" cy="173.78" r="7.9" fill="#ffffff"/>
+  <circle cx="589.29" cy="173.78" r="5.5" fill="#2f5d84"/>
+  <text x="560.00" y="108.00" font-size="13" fill="#1b2026" fill-opacity="0.850" text-anchor="middle" font-weight="400" dominant-baseline="middle">waxing</text>
+  <text x="560.00" y="206.00" font-size="11" fill="#1b2026" fill-opacity="0.750" text-anchor="middle" font-weight="400" dominant-baseline="middle">MOON</text>
+  <circle cx="784.0" cy="108.0" r="72.0" fill="none" stroke="#1b2026" stroke-opacity="0.5" stroke-width="1.2"/>
+  <line x1="784.00" y1="36.00" x2="846.35" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="846.35" y1="144.00" x2="721.65" y2="144.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="721.65" y1="144.00" x2="784.00" y2="36.00" stroke="#1b2026" stroke-opacity="0.088" stroke-width="1.0" stroke-linecap="butt"/>
+  <circle cx="832.18" cy="161.51" r="7.9" fill="#ffffff"/>
+  <circle cx="832.18" cy="161.51" r="5.5" fill="#2f5d84"/>
+  <text x="784.00" y="108.00" font-size="13" fill="#1b2026" fill-opacity="0.850" text-anchor="middle" font-weight="400" dominant-baseline="middle">spring</text>
+  <text x="784.00" y="206.00" font-size="11" fill="#1b2026" fill-opacity="0.750" text-anchor="middle" font-weight="400" dominant-baseline="middle">ONE YEAR</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "exochronometer-linux",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Linux/Omarchy port of Exochronometer - nested cycles of time as circles, geometry and just-intonation tones.",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "validate": "node test/validate.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

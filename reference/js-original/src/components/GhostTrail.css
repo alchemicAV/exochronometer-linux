@@ -1,0 +1,14 @@
+.ghost-trail {
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 220px;
+  height: auto;
+  margin-top: -6px;
+}
+
+.ghost-trail--visible {
+  opacity: 1;
+}

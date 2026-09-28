@@ -1,0 +1,180 @@
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 90vw;
+  z-index: 2;
+  padding: 40px 20px 20px;
+  position: relative;
+}
+
+.timeline__empty {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  width: 100%;
+  padding: 60px 0;
+}
+
+/* Arrow buttons with triangle icons */
+.timeline__arrow {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.timeline__arrow:hover {
+  opacity: 1;
+}
+
+/* Scrollable area */
+.timeline__scroll {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0;
+  position: relative;
+}
+
+/* Hide default scrollbar */
+.timeline__scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.timeline__scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline__scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+/* Inner track container — min-width ensures line spans full visible area */
+.timeline__track {
+  position: relative;
+  min-height: 180px;
+  padding-top: 140px;
+  width: 100%;
+}
+
+/* Horizontal timeline line — always spans full track */
+.timeline__line {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Each note flag */
+.timeline__flag {
+  position: absolute;
+  bottom: 30px;
+}
+
+/* Vertical stem */
+.timeline__flag-stem {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Dot on the timeline */
+.timeline__flag-dot {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Text content above stem */
+.timeline__flag-content {
+  position: absolute;
+  left: 6px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.timeline__flag-date {
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.timeline__flag-time {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 2px;
+}
+
+.timeline__flag-text {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Zoom controls */
+.timeline__zoom {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timeline__zoom-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  width: 22px;
+  height: 22px;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.timeline__zoom-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.timeline__zoom-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.timeline__zoom-label {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  min-width: 28px;
+  text-align: center;
+}

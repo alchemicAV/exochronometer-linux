@@ -1,0 +1,61 @@
+.journal-input {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 24px 16px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 30%);
+  z-index: 50;
+}
+
+.journal-input__row {
+  display: flex;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.journal-input__field {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  padding: 8px 12px;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.journal-input__field:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.journal-input__field::placeholder {
+  color: #DDD;
+}
+
+.journal-input__btn {
+  background: #000;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  padding: 8px 16px;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.journal-input__btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFF;
+}
+
+.journal-input__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
