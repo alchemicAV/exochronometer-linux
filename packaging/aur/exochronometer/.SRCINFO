@@ -1,0 +1,21 @@
+pkgbase = exochronometer
+	pkgdesc = Nested cycles of time as circles, inscribed geometry and just-intonation tones
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/alchemicAV/exochronometer-linux
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = nodejs
+	makedepends = npm
+	makedepends = pkgconf
+	makedepends = qt6-base
+	makedepends = qt6-multimedia
+	depends = qt6-declarative
+	depends = qt6-multimedia
+	depends = hicolor-icon-theme
+	options = !debug
+	source = exochronometer-0.1.0.tar.gz::https://github.com/alchemicAV/exochronometer-linux/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = 4fb796365e9ad0eefe2e07de0e02ed1fb61a4cdfea1d80daa4f8d6a11b79f747
+
+pkgname = exochronometer
